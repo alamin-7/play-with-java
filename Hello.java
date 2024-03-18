@@ -8,6 +8,14 @@ class Employye{
     void add(){
         System.out.println("Employye");
     }
+
+    public void test(int a){
+        System.out.println("Int");
+    }
+
+    public void test(double a){
+        System.out.println("Double");
+    }
 }
 
 class Engineer extends Employye{
@@ -95,6 +103,9 @@ class Hello{
 
         //software1.add();
 
+        Employye employye = new Employye();
+
+        employye.test(10);
 
     }
 }
