@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Generics",
+            "request": "launch",
+            "mainClass": "Generics",
+            "projectName": "play-with-java_c5d23fe4"
+        },
+        {
+            "type": "java",
             "name": "LambdaExpressionTest",
             "request": "launch",
             "mainClass": "LambdaExpressionTest",
