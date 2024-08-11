@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "SynchronizationTest",
+            "request": "launch",
+            "mainClass": "SynchronizationTest",
+            "projectName": "play-with-java_c5d23fe4"
+        },
+        {
+            "type": "java",
             "name": "MultiThreadTest",
             "request": "launch",
             "mainClass": "MultiThreadTest",
