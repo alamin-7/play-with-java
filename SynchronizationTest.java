@@ -1,3 +1,18 @@
+class Counter {
+
+    private int count = 0;
+
+    public synchronized void countIncrement(){
+        this.count++;
+    }
+
+    int getCount () {
+        return this.count;
+    }
+ }
+
+
+
 class Employee{
 
     synchronized static void printEmployeeNumber(int n){
@@ -43,10 +58,10 @@ class Thread4 extends Thread {
 }
 
 
-public class SynchronizationTest {
-    public static void main (String t[]){
+public class Main {
+    public static void main (String t[]) throws InterruptedException{
 
-     //   --------------  Using Synchronize method ----------
+        //   --------------  Using Synchronize method ----------
 
        /* Thread t1 = new Thread(){
             public void run(){
@@ -77,7 +92,7 @@ public class SynchronizationTest {
 
  --------------- static Synchronize -------------------------- */
 
-        Thread1 t1 = new Thread1();
+      /*  Thread1 t1 = new Thread1();
         Thread2 t2 = new Thread2();
         Thread3 t3= new Thread3();
         Thread4 t4= new Thread4();
@@ -86,7 +101,20 @@ public class SynchronizationTest {
         System.out.println("Main thread");
         t2.start();
         t3.start();
-        t4.start();
+        t4.start();*/
+
+        Counter counter = new Counter();
+
+        Thread t1 = new Thread(counter::countIncrement);
+        Thread t2 = new Thread(counter::countIncrement);
+
+        t1.start();
+        t2.start();
+
+        t1.join();
+        t2.join();
+
+        System.out.println("Final Count: "+counter.getCount());
 
     }
 
