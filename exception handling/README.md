@@ -9,11 +9,13 @@ In java we can handle exceptions in two ways:
 try block: This block contains the code that might throw an exception.
 catch block: This block contains the code that will be executed if an exception is thrown.
 
+```java
 try {
     // code that might throw an exception
 } catch {
     // code that will be executed if an exception is thrown
 }
+```
 
 In java, there are many types of exceptions, some of them are:
 
@@ -46,6 +48,10 @@ try{
 finally block: This block is used to execute some code regardless of whether an exception is thrown or not. like database connection close, file close etc.
 
 
-Uncheck Exception: These are the exception that are not checked at compile time. These are the exception that are thrown at runtime. Like `ArithmeticException`, `NullPointerException` etc.
+Unchecked Exception: These are the exception that are not checked at compile time. These are the exception that are thrown at runtime. Like `ArithmeticException`, `NullPointerException` etc.
 
 Checked Exception: These are the exception that are checked at compile time. These are the exception that are thrown at compile time. Like `IOException`, `SQLException` etc.
+
+throws key word: This key word is used to declare that a method may throw a checked exception. Like `throws IOException ` etc.
+
+throw key word: This key word is used to throw an exception. Like `throw new IOException()` etc
