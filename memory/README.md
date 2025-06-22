@@ -5,6 +5,10 @@ Java memory is part of the java virtual machine(JVM). It has five areas:
 1. Heap area: This is the area where all the objects and instance variable are stored. It is divided into two sub-areas:
 
 - Young Generation: This is the area where new objects are stored. 
+   Young Generation is further divided into two sub-areas: Edgen Generation and Survivor Generation.
+  i. Edgen Generation: This is the area where new objects are stored.
+  ii. Survivor Generation: This is the area where objects that have survived the garbage collection process are stored.
+
 - Old Generation: This is the area where objects that are not garbage collected are stored.
 
  `Phone phone = new Phone();` // object creation in Eden Space (Heap)
